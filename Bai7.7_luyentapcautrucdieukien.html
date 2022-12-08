@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước điện thoại</title>
+</head>
+<body>
+Số phut gọi
+<input type="text" id="minutes">
+<button type="button" onclick="moneyTelephone()">Tính cước</button>
+<p id="result"></p>
+<script>
+  function moneyTelephone(){
+    let phut= +document.getElementById('minutes').value
+    let phut200 = (phut - 200)*200 + 63000
+    let phut150 = (phut - 50)*400 + 3000
+    let phut50 = phut * 600
+    if (phut <= 50){
+      document.getElementById('result').innerHTML = 'Cước của bạn là: ' + phut50
+    } else if (phut <=200) {
+      document.getElementById('result').innerHTML = 'Cước của bạn là: ' + phut150
+    }else {
+      document.getElementById('result').innerHTML = 'Cước của bạn là: ' + phut200
+    }
+  }
+</script>
+</body>
+</html>

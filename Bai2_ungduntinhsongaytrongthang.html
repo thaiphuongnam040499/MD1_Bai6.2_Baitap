@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng tính số ngày trong tháng</title>
+</head>
+<body>
+<input type="text" name="" id="month1">
+<button type="button" onclick="dayNumber()">ĐÁ VÀO MÔNG TÔI</button>
+<p id="result1">Kết quả</p>
+<!--<p>Và</p>-->
+<!--<input type="text" name="" id="month2">-->
+<!--<button type="button" onclick="dayNumber()">ĐÁ VÀO MÔNG TÔI</button>-->
+<!--<p type="result2">Kết quả</p>-->
+<script>
+  function dayNumber(){
+    let thang = document.getElementById('month1').value
+      let ketqua ='thang này có 31 ngày'
+      let ketqua1= 'tháng này có 30 ngày'
+      let ketqua2='tháng 2 có 28 hoặc 29 ngày'
+    switch (thang){
+        case '1':
+        case '3':
+        case '5':
+        case '7':
+        case '9':
+        case '11':
+            document.getElementById('result1').innerHTML = 'Kết quả' + ketqua;
+            break;
+        case '4':
+        case '6':
+        case '8':
+        case '10':
+        case '12':
+            document.getElementById('result1').innerHTML = 'Kết quả' + ketqua1;
+            break;
+        case '2':
+            document.getElementById('result2').innerHTML = 'Kết quả' + ketqua2;
+            break;
+        default:
+            document.getElementById('result2').innerHTML = 'No result'
+            break;
+    }
+  }
+</script>
+</body>
+</html>

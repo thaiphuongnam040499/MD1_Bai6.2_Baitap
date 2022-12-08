@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Hoa Hồng dựa trên doanh số bán hàng</title>
+</head>
+<body>
+Nhập doanh số:
+<input type="text" id="sales">
+<button onclick="rose()">Tính Hoa Hồng</button>
+<p id="result"></p>
+<script>
+  function rose(){
+    let doanhso= +document.getElementById('sales').value
+    let rose1= doanhso * 10/100;
+    let rose2= doanhso * 5/100;
+    if (doanhso>=300000000) {
+      document.getElementById('result').innerHTML = 'Hoa hồng của bạn là: ' + rose1
+    }else {
+      document.getElementById('result').innerHTML = 'Hoa hồng của bạn là: ' + rose2
+    }
+  }
+
+</script>
+</body>
+</html>

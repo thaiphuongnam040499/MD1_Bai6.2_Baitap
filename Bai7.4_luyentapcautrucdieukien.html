@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị lớn nhất của ba số nguyên</title>
+</head>
+<body>
+<input id="a" type="text">
+<input id="b" type="text">
+<input id="c" type="text">
+<button type="button" onclick="kiemTra()">KIỂM TRA</button>
+<p id="result"></p>
+<script>
+    function kiemTra(){
+        let a = +document.getElementById('a').value
+        let b = +document.getElementById('b').value
+        let c = +document.getElementById('c').value
+        if (a>b){
+            if (b>c){
+                document.getElementById('result').innerHTML= 'a là số lớn nhất'
+            }else{
+                document.getElementById('result').innerHTML= 'c là số lớn nhất'
+            }
+        }else if (b>c) {
+            document.getElementById('result').innerHTML= 'b là số lớn nhất'
+        }else {
+            document.getElementById('result').innerHTML= 'c là số lớn nhất'
+        }
+    }
+
+</script>
+</body>
+</html>

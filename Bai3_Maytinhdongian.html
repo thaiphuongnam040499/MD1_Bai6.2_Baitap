@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+</head>
+<style>
+  button{
+    width: 30px;
+    height: 20px;
+  }
+  table{
+    border: 2px solid black;
+    text-align: center;
+  }
+</style>
+<body>
+<table>
+  <tr>
+    <td colspan="4"><input id="calculator" type="text"></td>
+  </tr>
+  <tr>
+    <td><button type="button" onclick="inputCaculator('1')">1</button></td>
+    <td><button type="button" onclick="inputCaculator('2')">2</button></td>
+    <td><button type="button" onclick="inputCaculator('3')">3</button></td>
+    <td><button type="button" onclick="inputCaculator('+')">+</button></td>
+  </tr>
+  <tr>
+    <td><button type="button" onclick="inputCaculator('3')">3</button></td>
+    <td><button type="button" onclick="inputCaculator('4')">4</button></td>
+    <td><button type="button" onclick="inputCaculator('5')">6</button></td>
+    <td><button type="button" onclick="inputCaculator('-')">-</button></td>
+  </tr>
+  <tr>
+    <td><button type="button" onclick="inputCaculator('7')">7</button></td>
+    <td><button type="button" onclick="inputCaculator('8')">8</button></td>
+    <td><button type="button" onclick="inputCaculator('9')">9</button></td>
+    <td><button type="button" onclick="inputCaculator('*')">x</button></td>
+  </tr>
+  <tr>
+    <td><button onclick="clearCaculator()">C</button></td>
+    <td><button type="button" onclick="inputCaculator('0')">0</button></td>
+    <td><button onclick="result()">=</button></td>
+    <td><button type="button" onclick="inputCaculator('/')">/</button></td>
+  </tr>
+</table>
+<script>
+  function inputCaculator(input){
+    document.getElementById('calculator').value += input;
+  }
+  function result(){
+    let input = document.getElementById('calculator').value
+    let result = eval(input)
+    document.getElementById('calculator').value = result
+  }
+  function clearCaculator(){
+    document.getElementById('calculator').value = '';
+  }
+  function canBac2(){
+    let input = document.getElementById('calculator').value
+    let ketQua = Math.sqrt(input)
+    document.getElementById('calculator').value = ketQua;
+  }
+</script>
+</body>
+</html>

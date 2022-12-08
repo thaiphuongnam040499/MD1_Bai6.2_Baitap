@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cân nặng cơ thể</title>
+</head>
+<body>
+<script>
+    let weigth= prompt('Cân Nặng', '')
+    let heigth= prompt('Chiều Cao', '')
+    let bmi= weigth / (heigth ** 2)
+    if (bmi<18){
+        document.write("Underweigth");
+    } else if (bmi<25.0){
+        document.write("Normal");
+    } else if (bmi<30.0){
+        document.write("Overweigth")
+    }
+    else {
+        document.write("Obese")
+    }
+</script>
+</body>
+</html>
